@@ -12,11 +12,25 @@
         </tr>
       </tbody>
     </table>
+    <table class="horse-table horse-add">
+      <tbody>
+        <tr>
+          <th>NO, 馬名, 年齢</th>
+          <th>
+            <router-link to="/add">新規追加</router-link>
+          </th>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
 import horses from '@/api/horses.js'
+import AddHorse from '@/components/AddHorse.vue'
 export default {
   computed: {
     list: () => horses.fetch()
@@ -39,5 +53,8 @@ tr {
 td {
   display: block;
   width: 100%;
+}
+.horse-add {
+  margin: 60px auto;
 }
 </style>
